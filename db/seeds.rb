@@ -29,12 +29,12 @@ products = Product.all
     category: categories.sample
   )
 end
-category_setting_items = CategorySettingItem.all
 
 100.times do |_|
-  ProductCategorySettingData.create!(
-    product: products.sample,
-    category_setting_item: category_setting_items.sample,
+  product = products.sample
+  ProductCategorySetting.create!(
+    product: product,
+    category_setting_item: product.category.category_setting_items.sample,
     enabled: [0, 1].sample
   )
 end
