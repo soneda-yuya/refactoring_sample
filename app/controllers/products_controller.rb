@@ -2,6 +2,6 @@
 
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.includes(category: :category_setting_items).all
   end
 end
