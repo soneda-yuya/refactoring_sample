@@ -1,12 +1,3 @@
 h1 = "ProductsController#Index"
 - @products&.each do |product|
-  h2
-    = "[category.id] #{product.category.id}"
-    = "[category.name] #{product.category.name}"
-  h3
-    = "[product.name] #{product.name}"
-  dl.row
-    - enabled_category_setting_item_ids = product.product_category_settings.filter { |v| v.enabled }.map(&:category_setting_item_id)
-    - product.category.category_setting_items.each do |item|
-      dt.col-sm-3 = item.name
-      dd.col-sm-3 = enabled_category_setting_item_ids.include?(item.id) ? "設定中" : "未設定"
+  == render partial: 'partials/product_setting', locals: { product: product }
