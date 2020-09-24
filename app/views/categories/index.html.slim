@@ -1,0 +1,12 @@
+h1 = "CategoriesController#Index"
+- @categories&.each do |category|
+  - category.products.each do |product|
+    h2
+      = "[category.id] #{category.id}"
+      = "[category.name] #{category.name}"
+    h3
+      = "[product.name] #{product.name}"
+    dl.row
+      - product.category.category_setting_items.each do |item|
+        dt.col-sm-3 = item.name
+        dd.col-sm-3 = CategorySettingItem.fetch_category_setting_data(category_setting_item_id: item.id)&.enabled ? "設定中" : "未設定"
