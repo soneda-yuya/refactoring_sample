@@ -2,5 +2,13 @@ Layout/LineLength:
   Exclude:
     - 'db/**/*'
 
+Metrics/BlockLength:
+  Exclude:
+    - 'db/**/*'
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'db/**/*'
+
 Documentation:
   Enabled: false
