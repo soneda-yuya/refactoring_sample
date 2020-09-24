@@ -1,2 +1,6 @@
+Layout/LineLength:
+  Exclude:
+    - 'db/**/*'
+
 Documentation:
   Enabled: false
