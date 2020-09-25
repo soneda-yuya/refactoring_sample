@@ -2,5 +2,14 @@ Layout/LineLength:
   Exclude:
     - 'db/**/*'
 
+Metrics/BlockLength:
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+
+Style/GuardClause:
+  Exclude:
+    - 'db/migrate/*'
+
 Documentation:
   Enabled: false
